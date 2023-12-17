@@ -4,9 +4,9 @@
 
 ``` python3 -m venv .venv```
 
-2 - Activate virtual environment (by using the activate script located in the bin directory of your virtual environment.)
+2 - Activate virtual environment 
 
-source .venv/bin/activate
+```source .venv/bin/activate```
 
 3 - run setup: 
 
