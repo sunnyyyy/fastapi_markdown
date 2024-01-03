@@ -4,27 +4,71 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <title>armando gonzalez sosto</title>
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.4.24/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @font-face {
+        font-family: 'Anthony';
+        src: url('font/Anthony.otf');
+        }
+        @font-face {
+        font-family: 'Garamondt-Regular';
+        src: url('font/Garamondt-Regular.otf');
+        }
+        .Test2{
+            font-family:'Anthony';
+        }
+        .Test3{
+            font-family:'Garamondt-Regular';
+        }
+      </style>
+   
+    <title>In-grid</title>
 </head>
 <body>
     <div>
-        <h1 class="text-4xl p-4"><a href="/">armando gonzalez sosto</a></h1>
-        <div class="px-4 pb-4">
-            <span>
-                <a href="/music">music</a>
-            </span>
-            <span>
-                <a href="/studio">studio</a>
-            </span>
-            <span>
-                <a href="/code">code</a>
-            </span>
-            <span>
-                <a href="/projects">projects</a>
-            </span>
-        </div>
-    </div>
-    <div class="p-4">
+        <div class="navbar bg-base-100 Test3">
+            <div class="navbar-start">
+              <div class="dropdown ">
+                <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+                </div>
+                <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                  <li><a href="/events">Events</a></li>
+                  <li>
+                    <a href="/projects">projects</a>
+                    <ul class="p-2">
+                      <li><a>Submenu 1</a></li>
+                      <li><a>Submenu 2</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="/workshops">Workshops</a></li>
+                </ul>
+              </div>
+              <a class="btn btn-ghost text-xl Test2" href="/home">In-grid</a>
+            </div>
+            <div class="navbar-center hidden lg:flex">
+              <ul class="menu menu-horizontal px-1">
+                <li><a href="/events">Events</a></li>
+                <li>
+                  <details>
+                    <summary>Parent</summary>
+                    <ul class="p-2">
+                      <li> <a href="/projects">projects</a></li>
+                      <li><a>Submenu 2</a></li>
+                    </ul>
+                  </details>
+                </li>
+                <li><a href="/workshops">Workshops</a></li>
+              </ul>
+            </div>
+            <div class="navbar-end">
+                <button class="btn btn-ghost"><a href="/list">List</a></button>
+            </div>
+       </div>
+
+    <div class="p-4 Test3">
         {{ content|safe }}
     </div>
 </body>
